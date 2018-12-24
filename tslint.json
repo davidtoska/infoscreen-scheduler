@@ -1,3 +1,14 @@
 {
-  "extends": ["tslint:recommended", "tslint-config-prettier"]
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "no-console": [
+      false
+    ],
+    "variable-name": [
+      "allow-leading-underscore"
+    ]
+  }
 }

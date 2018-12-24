@@ -1,11 +1,14 @@
 {
   "name": "infoscreen-scheduler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple scheduler for infoscreen.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest --config jestconfig.json",
+    "test": "jest --config jestconfig.json --watch",
+    "dev": "npm run build && concurrently \"npm run watch:tsc\" \"npm run watch:nodemon\"",
+    "watch:tsc": "./node_modules/.bin/tsc -w",
+    "watch:nodemon": "nodemon ./lib/index.js",
     "build": "./node_modules/.bin/tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
@@ -30,11 +33,16 @@
   "homepage": "https://github.com/davidtoska/infoscreen-scheduler#readme",
   "devDependencies": {
     "@types/jest": "^23.3.10",
+    "concurrently": "^4.1.0",
     "jest": "*",
+    "nodemon": "^1.18.9",
     "prettier": "^1.15.3",
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "moment": "^2.23.0"
   }
 }

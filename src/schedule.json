@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "timeOfDay",
+      "value": "Kveld"
+    },
+    {
+      "name": "message",
+      "value": "Svein skal utover"
+    }
+  ]
+}
