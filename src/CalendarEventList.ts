@@ -26,7 +26,6 @@ class CalendarEventList {
     return sorted;
   }
 
-
   get events(): CalendarEvent[] {
     return this._events;
   }

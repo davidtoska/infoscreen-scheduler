@@ -5,7 +5,7 @@ import CalendarEventList from '../CalendarEventList';
 
 const eventList: CalendarEventList = new CalendarEventList();
 
-describe("EventList", () => {
+describe('EventList', () => {
   beforeAll(() => {
     const initialElements = [
       new CalendarEvent('1jun', moment([2019, 6, 1, 0, 0]).format()),
@@ -34,19 +34,16 @@ describe("EventList", () => {
     expect(nBefore).toEqual(6);
   });
 
-  test("Adding a new event should increase number of elements", () => {
+  test('Adding a new event should increase number of elements', () => {
     const events = eventList.events;
     const nBefore = events.length;
-    eventList.add(new CalendarEvent("2feb", moment([2019, 2, 2, 9, 0]).format()));
+    eventList.add(new CalendarEvent('2feb', moment([2019, 2, 2, 9, 0]).format()));
     const nAfter = events.length;
     expect(nAfter - nBefore).toEqual(1);
-  })
+  });
 
-  test("A newly added element should be placed in sorted order", () => {
-    eventList.add(new CalendarEvent("2feb", moment([2019, 2, 2, 9, 0]).format()));
-    expect(eventList.events[2].name).toBe("2feb");
-  })
+  test('A newly added element should be placed in sorted order', () => {
+    eventList.add(new CalendarEvent('2feb', moment([2019, 2, 2, 9, 0]).format()));
+    expect(eventList.events[2].name).toBe('2feb');
+  });
 });
-
-
-

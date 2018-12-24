@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest --config jestconfig.json --watch",
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --config jestconfig.json --watch",
     "dev": "npm run build && concurrently \"npm run watch:tsc\" \"npm run watch:nodemon\"",
     "watch:tsc": "./node_modules/.bin/tsc -w",
     "watch:nodemon": "nodemon ./lib/index.js",
@@ -14,7 +15,7 @@
     "lint": "tslint -p tsconfig.json",
     "prepublish": "npm test && npm run lint",
     "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "version": "npm run format && git add -A",
     "postversion": "git push && git push --tags"
   },
   "repository": {
