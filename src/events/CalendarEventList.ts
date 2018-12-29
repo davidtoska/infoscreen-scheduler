@@ -2,8 +2,6 @@ import moment from 'moment';
 import CalendarEvent from './CalendarEvent';
 
 class CalendarEventList {
-  // Fields
-  public current?: CalendarEvent;
   private _events: CalendarEvent[];
 
   constructor() {
@@ -15,10 +13,9 @@ class CalendarEventList {
     this.sort(this._events);
   }
 
-  // Static members
   private sort(events: CalendarEvent[]): CalendarEvent[] {
     const sorted = events.sort((a, b) => {
-      if (moment(a.eventStart).isBefore(b.eventStart)) {
+      if (moment(a.startMoment).isBefore(b.startMoment)) {
         return -1;
       }
       return 1;

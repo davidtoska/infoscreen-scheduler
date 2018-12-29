@@ -1,11 +1,13 @@
 import moment from 'moment';
-import CalendarEvent from '../CalendarEvent';
+import CalendarEvent from './CalendarEvent';
+import CalendarEventList from './CalendarEventList';
 
-import CalendarEventList from '../CalendarEventList';
+// Init moment
+moment.locale('nb');
 
 const eventList: CalendarEventList = new CalendarEventList();
 
-describe('EventList', () => {
+describe('Testing EventList', () => {
   beforeAll(() => {
     const initialElements = [
       new CalendarEvent('1jun', moment([2019, 6, 1, 0, 0]).format()),
