@@ -1,3 +1,2 @@
-# NPM-package-template
+# This is a test-package
 - Typescript
-- Template
