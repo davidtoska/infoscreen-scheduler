@@ -1,6 +1,6 @@
 import moment from 'moment';
-import InfoScreenEventList from './InfoScreenEventList';
 import { createInfoScreenEvent } from './InfoScreenEvent';
+import InfoScreenEventList from './InfoScreenEventList';
 
 // Init moment
 moment.locale('nb');
